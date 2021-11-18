@@ -64,4 +64,9 @@ public class Exceptionhandler {
 	public GenericResponseDTO<String> handleUnexpectedTypeException(UnexpectedTypeException ex) {
 		return GenericResponseDTO.newInstance(ERROR.getCode(), ERROR.getMessage(), ex.getMessage());
 	}
+	
+	@ExceptionHandler(CustomException.class)
+	public GenericResponseDTO<String> handleCustomException(CustomException ex) {
+		return GenericResponseDTO.newInstance(ERROR.getCode(), ERROR.getMessage(), ex.getMessage());
+	}
 }

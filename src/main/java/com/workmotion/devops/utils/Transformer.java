@@ -1,12 +1,16 @@
 package com.workmotion.devops.utils;
 
+import java.util.Optional;
+
 import org.springframework.stereotype.Component;
+import static com.workmotion.devops.enums.Status.*;
 
 import com.workmotion.devops.dto.BasicInfoDTO;
 import com.workmotion.devops.dto.ContactInfoDTO;
 import com.workmotion.devops.dto.ContractInfoDTO;
 import com.workmotion.devops.dto.EmployeeDTO;
 import com.workmotion.devops.dto.EmployeeRequestDTO;
+import com.workmotion.devops.exception.CustomException;
 import com.workmotion.devops.model.BasicInfo;
 import com.workmotion.devops.model.ContactInfo;
 import com.workmotion.devops.model.ContractInfo;
@@ -19,17 +23,20 @@ import lombok.RequiredArgsConstructor;
 public class Transformer {
 	private final EmployeeUtil employeeUtil;
 	
-	public Employee create(EmployeeRequestDTO requestDTO) {
+	public Optional<Employee> create(EmployeeRequestDTO requestDTO) {
 		Employee employee = new Employee();
 		employee.setEmployeeNumber(employeeUtil.getEmpId());
-		employee.setBasicInfo(createBasicInfo(requestDTO.getBasicInfo()));
-		employee.setContactInfo(createContactInfo(requestDTO.getContactInfo()));
-		employee.setContractInfo(createContractInfo(requestDTO.getContractInfo()));
+		employee.setBasicInfo(createBasicInfo(requestDTO.getBasicInfo())
+				.orElseThrow(() -> new CustomException(BASIC_INFO_ERROR.getMessage())));
+		employee.setContactInfo(createContactInfo(requestDTO.getContactInfo())
+				.orElseThrow(() -> new CustomException(CONTACT_INFO_ERROR.getMessage())));
+		employee.setContractInfo(createContractInfo(requestDTO.getContractInfo())
+				.orElseThrow(() -> new CustomException(CONTRACT_INFO_ERROR.getMessage())));
 		
-		return employee;
+		return Optional.of(employee);
 	}
 	
-	private BasicInfo createBasicInfo(BasicInfoDTO basicInfoDTO) {
+	private Optional<BasicInfo> createBasicInfo(BasicInfoDTO basicInfoDTO) {
 		BasicInfo basicInfo = new BasicInfo();
 		
 		basicInfo.setAge(basicInfo.getAge());
@@ -39,10 +46,10 @@ public class Transformer {
 		basicInfo.setMaritalStatus(basicInfoDTO.getMaritalStatus());
 		basicInfo.setQualification(basicInfoDTO.getQualification());
 		
-		return basicInfo;
+		return Optional.of(basicInfo);
 	}
 	
-	private ContactInfo createContactInfo(ContactInfoDTO contactInfoDTO) {
+	private Optional<ContactInfo> createContactInfo(ContactInfoDTO contactInfoDTO) {
 		ContactInfo contactInfo = new ContactInfo();
 		
 		contactInfo.setAddress(contactInfoDTO.getAddress());
@@ -51,32 +58,35 @@ public class Transformer {
 		contactInfo.setNationality(contactInfoDTO.getNationality());
 		contactInfo.setPhoneNumber(contactInfoDTO.getPhoneNumber());
 		
-		return contactInfo;
+		return Optional.of(contactInfo);
 	}
 
-	private ContractInfo createContractInfo(ContractInfoDTO contractInfoDTO) {
+	private Optional<ContractInfo> createContractInfo(ContractInfoDTO contractInfoDTO) {
 		ContractInfo contractInfo = new ContractInfo();
 		
 		contractInfo.setContractType(contractInfoDTO.getContractType());
 		contractInfo.setDepartment(contractInfoDTO.getDepartment());
 		contractInfo.setWorkType(contractInfoDTO.getWorkType());
 
-		return contractInfo;
+		return Optional.of(contractInfo);
 	}
 	
-	public EmployeeDTO createEmployeeDTO(Employee employee_) {
-		EmployeeDTO employee = EmployeeDTO.builder().basicInfo(createBasicInfoDTO(employee_.getBasicInfo()))
-				.contactInfo(createContactInfoDTO(employee_.getContactInfo()))
-				.contractInfo(createContractInfoDTO(employee_.getContractInfo()))
+	public Optional<EmployeeDTO> createEmployeeDTO(Employee employee_) {
+		EmployeeDTO employee = EmployeeDTO.builder().basicInfo(createBasicInfoDTO(employee_.getBasicInfo())
+				.orElseThrow(() -> new CustomException(BASIC_INFO_ERROR.getMessage())))
+				.contactInfo(createContactInfoDTO(employee_.getContactInfo())
+						.orElseThrow(() -> new CustomException(CONTACT_INFO_ERROR.getMessage())))
+				.contractInfo(createContractInfoDTO(employee_.getContractInfo())
+						.orElseThrow(() -> new CustomException(CONTRACT_INFO_ERROR.getMessage())))
 				.id(employee_.getId())
 				.state(employee_.getState())
 				.build();
 		
-		return employee;
+		return Optional.of(employee);
 	}
 	
 	
-	private BasicInfoDTO createBasicInfoDTO(BasicInfo basicInfo) {
+	private Optional<BasicInfoDTO> createBasicInfoDTO(BasicInfo basicInfo) {
 		BasicInfoDTO basicInfoDTO = new BasicInfoDTO();
 		
 		basicInfoDTO.setAge(basicInfo.getAge());
@@ -86,10 +96,10 @@ public class Transformer {
 		basicInfoDTO.setMaritalStatus(basicInfo.getMaritalStatus());
 		basicInfoDTO.setQualification(basicInfo.getQualification());
 		
-		return basicInfoDTO;
+		return Optional.of(basicInfoDTO);
 	}
 	
-	private ContactInfoDTO createContactInfoDTO(ContactInfo contactInfo) {
+	private Optional<ContactInfoDTO> createContactInfoDTO(ContactInfo contactInfo) {
 		ContactInfoDTO contactInfoDTO = new ContactInfoDTO();
 		
 		contactInfoDTO.setAddress(contactInfo.getAddress());
@@ -98,16 +108,16 @@ public class Transformer {
 		contactInfoDTO.setNationality(contactInfo.getNationality());
 		contactInfoDTO.setPhoneNumber(contactInfo.getPhoneNumber());
 		
-		return contactInfoDTO;
+		return Optional.of(contactInfoDTO);
 	}
 
-	private ContractInfoDTO createContractInfoDTO(ContractInfo contractInfo) {
+	private Optional<ContractInfoDTO> createContractInfoDTO(ContractInfo contractInfo) {
 		ContractInfoDTO contractInfoDTO = new ContractInfoDTO();
 		
 		contractInfoDTO.setContractType(contractInfo.getContractType());
 		contractInfoDTO.setDepartment(contractInfo.getDepartment());
 		contractInfoDTO.setWorkType(contractInfo.getWorkType());
 
-		return contractInfoDTO;
+		return Optional.of(contractInfoDTO);
 	}
 }
