@@ -28,6 +28,8 @@ public class BasicInfo extends CommonFields {
 	@OneToOne
 	@JsonIgnore
 	private Employee employee;
+	@Enumerated(EnumType.STRING)
 	private Gender gender;
+	@Enumerated(EnumType.STRING)
 	private MaritalStatus maritalStatus;
 }

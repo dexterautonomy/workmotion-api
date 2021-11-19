@@ -39,10 +39,11 @@ public class Transformer {
 	private Optional<BasicInfo> createBasicInfo(BasicInfoDTO basicInfoDTO) {
 		BasicInfo basicInfo = new BasicInfo();
 		
-		basicInfo.setAge(basicInfo.getAge());
+		basicInfo.setAge(basicInfoDTO.getAge());
 		basicInfo.setFirstName(basicInfoDTO.getFirstName());
 		basicInfo.setGender(basicInfoDTO.getGender());
 		basicInfo.setLastName(basicInfoDTO.getLastName());
+		basicInfo.setMiddleName(basicInfoDTO.getMiddleName());
 		basicInfo.setMaritalStatus(basicInfoDTO.getMaritalStatus());
 		basicInfo.setQualification(basicInfoDTO.getQualification());
 		
@@ -89,10 +90,12 @@ public class Transformer {
 	private Optional<BasicInfoDTO> createBasicInfoDTO(BasicInfo basicInfo) {
 		BasicInfoDTO basicInfoDTO = new BasicInfoDTO();
 		
+		basicInfoDTO.setId(basicInfo.getId());
 		basicInfoDTO.setAge(basicInfo.getAge());
 		basicInfoDTO.setFirstName(basicInfo.getFirstName());
 		basicInfoDTO.setGender(basicInfo.getGender());
 		basicInfoDTO.setLastName(basicInfo.getLastName());
+		basicInfoDTO.setMiddleName(basicInfo.getMiddleName());
 		basicInfoDTO.setMaritalStatus(basicInfo.getMaritalStatus());
 		basicInfoDTO.setQualification(basicInfo.getQualification());
 		
@@ -102,6 +105,7 @@ public class Transformer {
 	private Optional<ContactInfoDTO> createContactInfoDTO(ContactInfo contactInfo) {
 		ContactInfoDTO contactInfoDTO = new ContactInfoDTO();
 		
+		contactInfoDTO.setId(contactInfo.getId());
 		contactInfoDTO.setAddress(contactInfo.getAddress());
 		contactInfoDTO.setCountryOfResidence(contactInfo.getCountryOfResidence());
 		contactInfoDTO.setEmail(contactInfo.getEmail());
@@ -114,6 +118,7 @@ public class Transformer {
 	private Optional<ContractInfoDTO> createContractInfoDTO(ContractInfo contractInfo) {
 		ContractInfoDTO contractInfoDTO = new ContractInfoDTO();
 		
+		contractInfoDTO.setId(contractInfo.getId());
 		contractInfoDTO.setContractType(contractInfo.getContractType());
 		contractInfoDTO.setDepartment(contractInfo.getDepartment());
 		contractInfoDTO.setWorkType(contractInfo.getWorkType());

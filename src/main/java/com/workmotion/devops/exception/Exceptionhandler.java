@@ -7,6 +7,7 @@ import javax.validation.UnexpectedTypeException;
 import static com.workmotion.devops.enums.Status.*;
 
 import org.springframework.http.HttpStatus;
+import org.springframework.http.converter.HttpMessageNotReadableException;
 import org.springframework.validation.FieldError;
 import org.springframework.web.HttpRequestMethodNotSupportedException;
 import org.springframework.web.bind.MethodArgumentNotValidException;
@@ -68,5 +69,10 @@ public class Exceptionhandler {
 	@ExceptionHandler(CustomException.class)
 	public GenericResponseDTO<String> handleCustomException(CustomException ex) {
 		return GenericResponseDTO.newInstance(ERROR.getCode(), ERROR.getMessage(), ex.getMessage());
+	}
+	
+	@ExceptionHandler(HttpMessageNotReadableException.class)
+	public GenericResponseDTO<String> handleHttpMessageNotReadableException(HttpMessageNotReadableException ex) {
+		return GenericResponseDTO.newInstance(ERROR.getCode(), ERROR.getMessage(), ex.getLocalizedMessage());
 	}
 }
