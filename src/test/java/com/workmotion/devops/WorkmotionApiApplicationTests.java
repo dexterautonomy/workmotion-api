@@ -4,37 +4,18 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.junit.jupiter.api.Assertions.assertTrue;
-import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
-import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
-import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.view;
-
-import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.http.MediaType;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
-import org.springframework.test.web.servlet.MockMvc;
-import org.springframework.web.context.WebApplicationContext;
-
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.databind.ObjectWriter;
-import com.fasterxml.jackson.databind.SerializationFeature;
 import com.workmotion.devops.dto.BasicInfoDTO;
 import com.workmotion.devops.dto.ContactInfoDTO;
 import com.workmotion.devops.dto.ContractInfoDTO;
 import com.workmotion.devops.dto.EmployeeDTO;
 import com.workmotion.devops.dto.EmployeeRequestDTO;
 import com.workmotion.devops.exception.CustomException;
-import com.workmotion.devops.repository.BasicInfoRepo;
-import com.workmotion.devops.repository.ContactInfoRepo;
-import com.workmotion.devops.repository.ContractInfoRepo;
-import com.workmotion.devops.repository.EmployeeRepo;
 
 import static com.workmotion.devops.enums.Gender.*;
 import static com.workmotion.devops.enums.Country.*;
@@ -60,23 +41,10 @@ class WorkmotionApiApplicationTests {
 	private EmployeeService employeeService;
 	@Autowired
 	private EmployeeUtil employeeUtil;
-	@Autowired
-	private EmployeeRepo employeeRepo;
-	@Autowired
-	private BasicInfoRepo basicInfoRepo;
-	@Autowired
-	private ContactInfoRepo contactInfoRepo;
-	@Autowired
-	private ContractInfoRepo contractInfoRepo;
-	@Autowired
-	private WebApplicationContext webApplicationContext;
-	private MockMvc mockMvc;
 	private EmployeeRequestDTO employeeRequestDTO = null;
 	private ContactInfoDTO contactInfoDTO = null;
 	private BasicInfoDTO basicInfoDTO = null;
 	private ContractInfoDTO contractInfoDTO = null;
-	private ObjectMapper mapper = new ObjectMapper();
-    private ObjectWriter objectWriter = null;
 	
 	@BeforeEach
 	public void init() {
@@ -117,9 +85,6 @@ class WorkmotionApiApplicationTests {
 		employeeService.createEmployee(employeeRequestDTO).getData();
 		
 		log.info("--->> EmployeeRequestDTO object: {}", employeeRequestDTO);
-		
-	    mapper.configure(SerializationFeature.WRAP_ROOT_VALUE, false);
-	    objectWriter = mapper.writer().withDefaultPrettyPrinter();
 	}
 	
 	@Test
