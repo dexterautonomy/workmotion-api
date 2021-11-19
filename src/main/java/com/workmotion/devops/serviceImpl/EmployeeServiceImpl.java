@@ -110,7 +110,6 @@ public class EmployeeServiceImpl implements EmployeeService {
 		return GenericResponseDTO.newInstance(SUCCESS.getCode(), SUCCESS.getMessage(), empDTO);
 	}
 
-
 	@Transactional
 	private void updateChildren(Employee employee) {
 		BasicInfo basicInfo = employee.getBasicInfo();
