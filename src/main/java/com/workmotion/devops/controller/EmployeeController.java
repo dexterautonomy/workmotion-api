@@ -41,7 +41,7 @@ public class EmployeeController {
 		return new ResponseEntity<>(employeeService.fetchEmployee(id), HttpStatus.OK);
 	}
 	
-	@PostMapping("update/{id}/{state}")
+	@GetMapping("update/{id}/{state}")
 	public ResponseEntity<GenericResponseDTO<EmployeeDTO>> updateEmployee(@PathVariable Long id, @PathVariable State state){
 		log.info("---->>> Updating employee");
 		return new ResponseEntity<>(employeeService.updateEmployee(id, state), HttpStatus.OK);
