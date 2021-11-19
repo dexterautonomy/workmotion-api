@@ -86,7 +86,6 @@ public class Transformer {
 		return Optional.of(employee);
 	}
 	
-	
 	private Optional<BasicInfoDTO> createBasicInfoDTO(BasicInfo basicInfo) {
 		BasicInfoDTO basicInfoDTO = new BasicInfoDTO();
 		

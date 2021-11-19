@@ -16,7 +16,6 @@ public class EmployeeUtil {
 			new AtomicReference<>(System.currentTimeMillis());
 	
 	public static synchronized String generateEmpID() {
-		
 		Long prev;
 		Long next = System.currentTimeMillis();
 		do {
@@ -27,10 +26,6 @@ public class EmployeeUtil {
 		return "WM" + String.valueOf(next);
 	}
 
-//	public static void main(String[] args) {
-//		System.out.println(getEmpId());
-//	}
-	
 	public String getEmpId() {
 		String empNumber;
 		
