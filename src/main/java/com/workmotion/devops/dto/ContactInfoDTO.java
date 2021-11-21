@@ -6,8 +6,6 @@ import javax.validation.constraints.NotBlank;
 import org.hibernate.validator.constraints.SafeHtml;
 import org.hibernate.validator.constraints.SafeHtml.WhiteListType;
 
-import com.workmotion.devops.enums.Country;
-
 import lombok.Data;
 import lombok.RequiredArgsConstructor;
 
@@ -25,6 +23,8 @@ public class ContactInfoDTO {
 	@Email(message = "Must be a valid email")
 	@SafeHtml(whitelistType = WhiteListType.NONE)
 	private String email;
-	private Country nationality;
-	private Country countryOfResidence;
+	@SafeHtml(whitelistType = WhiteListType.NONE)
+	private String nationality = "GERMANY";
+	@SafeHtml(whitelistType = WhiteListType.NONE)
+	private String countryOfResidence = "GERMANY";
 }

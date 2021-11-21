@@ -4,6 +4,7 @@ import java.util.Optional;
 
 import org.springframework.stereotype.Component;
 import static com.workmotion.devops.enums.Status.*;
+import static com.workmotion.devops.enums.EntryType.*;
 
 import com.workmotion.devops.dto.BasicInfoDTO;
 import com.workmotion.devops.dto.ContactInfoDTO;
@@ -41,11 +42,19 @@ public class Transformer {
 		
 		basicInfo.setAge(basicInfoDTO.getAge());
 		basicInfo.setFirstName(basicInfoDTO.getFirstName());
-		basicInfo.setGender(basicInfoDTO.getGender());
 		basicInfo.setLastName(basicInfoDTO.getLastName());
 		basicInfo.setMiddleName(basicInfoDTO.getMiddleName());
-		basicInfo.setMaritalStatus(basicInfoDTO.getMaritalStatus());
-		basicInfo.setQualification(basicInfoDTO.getQualification());
+		basicInfo.setGender(employeeUtil.validateEntry(basicInfoDTO.getGender(), GENDER)
+				.orElseThrow(() -> new CustomException("No such gender. Get available list "
+						+ "of gender types from 'get-genders' API")));
+		basicInfo.setMaritalStatus(employeeUtil.validateEntry(basicInfoDTO.getMaritalStatus(), 
+				MARITAL_STATUS)
+				.orElseThrow(() -> new CustomException("No such marital status. Get available "
+						+ "list of marital status from 'get-marital-statuses' API")));
+		basicInfo.setQualification(employeeUtil.validateEntry(basicInfoDTO.getQualification(),
+				QUALIFICATION)
+				.orElseThrow(() -> new CustomException("No such qualification. Get available "
+						+ "list of work qualifications from 'get-qualifications' API")));
 		
 		return Optional.of(basicInfo);
 	}
@@ -54,9 +63,15 @@ public class Transformer {
 		ContactInfo contactInfo = new ContactInfo();
 		
 		contactInfo.setAddress(contactInfoDTO.getAddress());
-		contactInfo.setCountryOfResidence(contactInfoDTO.getCountryOfResidence());
 		contactInfo.setEmail(contactInfoDTO.getEmail());
-		contactInfo.setNationality(contactInfoDTO.getNationality());
+		contactInfo.setCountryOfResidence(employeeUtil.validateEntry(contactInfoDTO.getCountryOfResidence(),
+				RESIDENCE_COUNTRY)
+				.orElseThrow(() -> new CustomException("No such country of residence. Get available list of countries "
+						+ "from 'get-approved-countries' API")));
+		contactInfo.setNationality(employeeUtil.validateEntry(contactInfoDTO.getNationality(),
+				NATIONALITY)
+				.orElseThrow(() -> new CustomException("No such nationality. Get available list of "
+						+ "nationality from 'get-approved-countries' API")));
 		contactInfo.setPhoneNumber(contactInfoDTO.getPhoneNumber());
 		
 		return Optional.of(contactInfo);
@@ -65,9 +80,18 @@ public class Transformer {
 	private Optional<ContractInfo> createContractInfo(ContractInfoDTO contractInfoDTO) {
 		ContractInfo contractInfo = new ContractInfo();
 		
-		contractInfo.setContractType(contractInfoDTO.getContractType());
-		contractInfo.setDepartment(contractInfoDTO.getDepartment());
-		contractInfo.setWorkType(contractInfoDTO.getWorkType());
+		contractInfo.setContractType(employeeUtil.validateEntry(contractInfoDTO.getContractType(),
+				CONTRACT_TYPE)
+				.orElseThrow(() -> new CustomException("No such contract type. Get available list of "
+						+ "contract types from 'get-contract-types' API")));
+		contractInfo.setDepartment(employeeUtil.validateEntry(contractInfoDTO.getDepartment(),
+				DEPARTMENT)
+				.orElseThrow(() -> new CustomException("No such department. Get available list of "
+						+ "departments from 'get-departments' API")));
+		contractInfo.setWorkType(employeeUtil.validateEntry(contractInfoDTO.getWorkType(), 
+				WORK_TYPE)
+				.orElseThrow(() -> new CustomException("No such work type. Get available list of "
+						+ "work types from 'get-work-types' API")));
 
 		return Optional.of(contractInfo);
 	}

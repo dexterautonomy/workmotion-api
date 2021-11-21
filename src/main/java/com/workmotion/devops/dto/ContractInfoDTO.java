@@ -1,21 +1,20 @@
 package com.workmotion.devops.dto;
 
-import static com.workmotion.devops.enums.ContractType.PERMANENT;
-import static com.workmotion.devops.enums.Department.IT;
-import static com.workmotion.devops.enums.WorkType.REMOTE;
-
-import com.workmotion.devops.enums.ContractType;
-import com.workmotion.devops.enums.Department;
-import com.workmotion.devops.enums.WorkType;
+import org.hibernate.validator.constraints.SafeHtml;
+import org.hibernate.validator.constraints.SafeHtml.WhiteListType;
 
 import lombok.Data;
 import lombok.RequiredArgsConstructor;
 
 @Data
 @RequiredArgsConstructor
+@SuppressWarnings("deprecation")
 public class ContractInfoDTO {
 	private Long id;
-	private WorkType workType = REMOTE;
-	private ContractType contractType = PERMANENT;
-	private Department department = IT;
+	@SafeHtml(whitelistType = WhiteListType.NONE)
+	private String workType = "REMOTE";
+	@SafeHtml(whitelistType = WhiteListType.NONE)
+	private String contractType = "PERMANENT";
+	@SafeHtml(whitelistType = WhiteListType.NONE)
+	private String department = "SALES";
 }

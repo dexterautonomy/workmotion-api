@@ -4,12 +4,15 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.junit.jupiter.api.Assertions.assertTrue;
+
+import java.util.List;
+
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.test.context.junit.jupiter.SpringExtension;
+
+import com.workmotion.devops.config.ConfigProcessor;
 import com.workmotion.devops.dto.BasicInfoDTO;
 import com.workmotion.devops.dto.ContactInfoDTO;
 import com.workmotion.devops.dto.ContractInfoDTO;
@@ -17,30 +20,22 @@ import com.workmotion.devops.dto.EmployeeDTO;
 import com.workmotion.devops.dto.EmployeeRequestDTO;
 import com.workmotion.devops.exception.CustomException;
 
-import static com.workmotion.devops.enums.Gender.*;
-import static com.workmotion.devops.enums.Country.*;
-import static com.workmotion.devops.enums.ContractType.*;
-import static com.workmotion.devops.enums.Department.*;
 import static com.workmotion.devops.enums.State.*;
-import static com.workmotion.devops.enums.Qualification.*;
-import static com.workmotion.devops.enums.MaritalStatus.*;
-import static com.workmotion.devops.enums.WorkType.*;
 import com.workmotion.devops.service.EmployeeService;
 import com.workmotion.devops.utils.EmployeeUtil;
 
-import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 @SpringBootTest
-@RequiredArgsConstructor
-@ExtendWith(SpringExtension.class)
 class WorkmotionApiApplicationTests {
 
 	@Autowired
 	private EmployeeService employeeService;
 	@Autowired
 	private EmployeeUtil employeeUtil;
+	@Autowired
+	private ConfigProcessor configProcessor;
 	private EmployeeRequestDTO employeeRequestDTO = null;
 	private ContactInfoDTO contactInfoDTO = null;
 	private BasicInfoDTO basicInfoDTO = null;
@@ -54,26 +49,26 @@ class WorkmotionApiApplicationTests {
 		basicInfoDTO.setAge(30);
 		basicInfoDTO.setFirstName("Chinedu");
 		basicInfoDTO.setLastName("Ezeigbo");
-		basicInfoDTO.setGender(MALE);
+		basicInfoDTO.setGender("MALE");
 		basicInfoDTO.setMiddleName("Bright");
-		basicInfoDTO.setMaritalStatus(SINGLE);
-		basicInfoDTO.setQualification(FIRST_DEGREE);
+		basicInfoDTO.setMaritalStatus("SINGLE");
+		basicInfoDTO.setQualification("FIRST_DEGREE");
 		
 		log.info("--->> BasicInfoDTO object: {}", basicInfoDTO);
 		
 		contactInfoDTO = new ContactInfoDTO();
-		contactInfoDTO.setAddress("47 Alpine Crescent, DRY Boulevard");
-		contactInfoDTO.setCountryOfResidence(GER);
+		contactInfoDTO.setAddress("1995 Solid Alpine Crescent, DRY Boulevard, WORA Avenue");
+		contactInfoDTO.setCountryOfResidence("GERMANY");
 		contactInfoDTO.setEmail("dexterautonomy@yahoo.com");
-		contactInfoDTO.setNationality(USA);
+		contactInfoDTO.setNationality("GERMANY");
 		contactInfoDTO.setPhoneNumber("+23470389456789");
 		
 		log.info("--->> ContactInfoDTO object: {}", contactInfoDTO);
 		
 		contractInfoDTO = new ContractInfoDTO();
-		contractInfoDTO.setContractType(PART_TIME);
-		contractInfoDTO.setWorkType(HYBRID);
-		contractInfoDTO.setDepartment(HR);
+		contractInfoDTO.setContractType("PART_TIME");
+		contractInfoDTO.setWorkType("HYBRID");
+		contractInfoDTO.setDepartment("HR");
 		
 		log.info("--->> ContractInfoDTO object: {}", contractInfoDTO);
 		
@@ -93,8 +88,8 @@ class WorkmotionApiApplicationTests {
 		assertTrue(employee.getId() != null);
 		assertTrue(employee.getBasicInfo() != null);
 		assertEquals("Chinedu", employee.getBasicInfo().getFirstName());
-		assertEquals(HR, employee.getContractInfo().getDepartment());
-		assertEquals(GER, employee.getContactInfo().getCountryOfResidence());
+		assertEquals("HR", employee.getContractInfo().getDepartment());
+		assertEquals("GERMANY", employee.getContactInfo().getCountryOfResidence());
 	}
 	
 	@Test
@@ -103,8 +98,8 @@ class WorkmotionApiApplicationTests {
 		EmployeeDTO employee = employeeService.fetchEmployee(1L).getData();
 		assertTrue(employee.getBasicInfo() != null);
 		assertEquals("Chinedu", employee.getBasicInfo().getFirstName());
-		assertEquals(HR, employee.getContractInfo().getDepartment());
-		assertEquals(GER, employee.getContactInfo().getCountryOfResidence());
+		assertEquals("HR", employee.getContractInfo().getDepartment());
+		assertEquals("GERMANY", employee.getContactInfo().getCountryOfResidence());
 	}
 	
 	@Test
@@ -118,6 +113,69 @@ class WorkmotionApiApplicationTests {
 	public void getEmpIdTest() {
 		String empNumber = employeeUtil.getEmpId();
 		assertNotNull(empNumber);
+	}
+	
+	@Test
+	public void getContractTypeTest() {
+		List<String> contractType = configProcessor.getContractType();
+		contractType.stream().forEach(System.out::println);
+		assertNotNull(contractType);
+		assertTrue(contractType.size() > 0);
+		assertTrue(contractType.contains("PERMANENT"));
+	}
+	
+	@Test
+	public void getCountriesTest() {
+		List<String> countries = configProcessor.getCountries();
+		countries.stream().forEach(System.out::println);
+		assertNotNull(countries);
+		assertTrue(countries.size() > 0);
+		assertTrue(countries.contains("GERMANY"));
+	}
+	
+	@Test
+	public void getDepartmentTest() {
+		List<String> department = configProcessor.getDepartment();
+		department.stream().forEach(System.out::println);
+		assertNotNull(department);
+		assertTrue(department.size() > 0);
+		assertTrue(department.contains("ACCOUNTING"));
+	}
+	
+	@Test
+	public void getGenderTest() {
+		List<String> gender = configProcessor.getGender();
+		gender.stream().forEach(System.out::println);
+		assertNotNull(gender);
+		assertTrue(gender.size() > 0);
+		assertTrue(gender.contains("MALE"));
+	}
+	
+	@Test
+	public void getMaritalStatusTest() {
+		List<String> maritalStatus = configProcessor.getMaritalStatus();
+		maritalStatus.stream().forEach(System.out::println);
+		assertNotNull(maritalStatus);
+		assertTrue(maritalStatus.size() > 0);
+		assertTrue(maritalStatus.contains("SINGLE"));
+	}
+	
+	@Test
+	public void getQualificationTest() {
+		List<String> qualification = configProcessor.getQualification();
+		qualification.stream().forEach(System.out::println);
+		assertNotNull(qualification);
+		assertTrue(qualification.size() > 0);
+		assertTrue(qualification.contains("FIRST_DEGREE"));
+	}
+	
+	@Test
+	public void getWorkTypeTest() {
+		List<String> workType = configProcessor.getWorkType();
+		workType.stream().forEach(System.out::println);
+		assertNotNull(workType);
+		assertTrue(workType.size() > 0);
+		assertTrue(workType.contains("ON_SITE"));
 	}
 }
 

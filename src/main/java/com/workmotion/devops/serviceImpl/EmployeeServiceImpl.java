@@ -2,9 +2,13 @@ package com.workmotion.devops.serviceImpl;
 
 import org.springframework.hateoas.Link;
 import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.*;
+
+import java.util.List;
+
 import static com.workmotion.devops.enums.State.*;
 import org.springframework.stereotype.Service;
 
+import com.workmotion.devops.config.ConfigProcessor;
 import com.workmotion.devops.controller.EmployeeController;
 import com.workmotion.devops.dto.EmployeeDTO;
 import com.workmotion.devops.dto.EmployeeRequestDTO;
@@ -37,6 +41,7 @@ public class EmployeeServiceImpl implements EmployeeService {
 	private final BasicInfoRepo basicInfoRepo;
 	private final ContactInfoRepo contactInfoRepo;
 	private final ContractInfoRepo contractInfoRepo;
+	private final ConfigProcessor configProcessor;
 
 	@Override
 	@Transactional
@@ -123,5 +128,47 @@ public class EmployeeServiceImpl implements EmployeeService {
 		ContractInfo contractInfo = employee.getContractInfo();
 		contractInfo.setEmployee(employee);
 		contractInfoRepo.save(contractInfo);
+	}
+	
+	@Override
+	public GenericResponseDTO<List<String>> contractType() {
+		return GenericResponseDTO.newInstance(SUCCESS.getCode(), SUCCESS.getMessage(), 
+				configProcessor.getContractType());
+	}
+	
+	@Override
+	public GenericResponseDTO<List<String>> countries() {
+		return GenericResponseDTO.newInstance(SUCCESS.getCode(), SUCCESS.getMessage(), 
+				configProcessor.getCountries());
+	}
+	
+	@Override
+	public GenericResponseDTO<List<String>> department() {
+		return GenericResponseDTO.newInstance(SUCCESS.getCode(), SUCCESS.getMessage(), 
+				configProcessor.getDepartment());
+	}
+	
+	@Override
+	public GenericResponseDTO<List<String>> gender() {
+		return GenericResponseDTO.newInstance(SUCCESS.getCode(), SUCCESS.getMessage(), 
+				configProcessor.getGender());
+	}
+	
+	@Override
+	public GenericResponseDTO<List<String>> maritalStatus() {
+		return GenericResponseDTO.newInstance(SUCCESS.getCode(), SUCCESS.getMessage(), 
+				configProcessor.getMaritalStatus());
+	}
+	
+	@Override
+	public GenericResponseDTO<List<String>> qualification() {
+		return GenericResponseDTO.newInstance(SUCCESS.getCode(), SUCCESS.getMessage(), 
+				configProcessor.getQualification());
+	}
+	
+	@Override
+	public GenericResponseDTO<List<String>> worktype() {
+		return GenericResponseDTO.newInstance(SUCCESS.getCode(), SUCCESS.getMessage(), 
+				configProcessor.getWorkType());
 	}
 }

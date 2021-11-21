@@ -1,0 +1,12 @@
+package com.workmotion.devops.enums;
+
+public enum EntryType {
+	CONTRACT_TYPE,
+	NATIONALITY,
+	DEPARTMENT,
+	RESIDENCE_COUNTRY,
+	GENDER,
+	MARITAL_STATUS,
+	QUALIFICATION,
+	WORK_TYPE;
+}

@@ -1,14 +1,9 @@
 package com.workmotion.devops.model;
 
 import javax.persistence.Entity;
-import javax.persistence.EnumType;
-import javax.persistence.Enumerated;
 import javax.persistence.OneToOne;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.workmotion.devops.enums.Gender;
-import com.workmotion.devops.enums.MaritalStatus;
-import com.workmotion.devops.enums.Qualification;
 
 import lombok.Data;
 import lombok.EqualsAndHashCode;
@@ -23,13 +18,10 @@ public class BasicInfo extends CommonFields {
 	private String lastName;
 	private String middleName;
 	private int age;
-	@Enumerated(EnumType.STRING)
-	private Qualification qualification;
+	private String qualification;
 	@OneToOne
 	@JsonIgnore
 	private Employee employee;
-	@Enumerated(EnumType.STRING)
-	private Gender gender;
-	@Enumerated(EnumType.STRING)
-	private MaritalStatus maritalStatus;
+	private String gender;
+	private String maritalStatus;
 }
