@@ -6,6 +6,7 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -21,6 +22,7 @@ import com.workmotion.devops.dto.EmployeeRequestDTO;
 import com.workmotion.devops.exception.CustomException;
 
 import static com.workmotion.devops.enums.State.*;
+import static com.workmotion.devops.enums.EntryType.*;
 import com.workmotion.devops.service.EmployeeService;
 import com.workmotion.devops.utils.EmployeeUtil;
 
@@ -176,6 +178,15 @@ class WorkmotionApiApplicationTests {
 		assertNotNull(workType);
 		assertTrue(workType.size() > 0);
 		assertTrue(workType.contains("ON_SITE"));
+	}
+	
+	@Test
+	public void validateEntryTest() {
+		assertEquals("GERMANY", employeeUtil.validateEntry("germany ", RESIDENCE_COUNTRY).get());
+		assertEquals(Optional.empty(), employeeUtil.validateEntry("GERMANY_", RESIDENCE_COUNTRY));
+		
+		assertEquals("REMOTE", employeeUtil.validateEntry("remote ", WORK_TYPE).get());
+		assertEquals("MALE", employeeUtil.validateEntry(" male ", GENDER).get());
 	}
 }
 
