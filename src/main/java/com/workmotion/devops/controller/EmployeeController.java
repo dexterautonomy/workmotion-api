@@ -21,6 +21,7 @@ import com.workmotion.devops.dto.GenericResponseDTO;
 import com.workmotion.devops.enums.State;
 import com.workmotion.devops.service.EmployeeService;
 
+import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 
@@ -29,6 +30,7 @@ import lombok.extern.slf4j.Slf4j;
 @RequiredArgsConstructor
 @RequestMapping("api/v1")
 @CrossOrigin(maxAge = 3600, origins = "*")
+@SecurityRequirement(name = "Channel-Code")
 public class EmployeeController {
 	private final EmployeeService employeeService;
 	

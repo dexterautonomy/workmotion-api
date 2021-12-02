@@ -1,0 +1,371 @@
+Thu 02-12-2021 04:08:30.207 WARN  - [-17 housekeeper] HikariPool                : HikariPool-17 - Thread starvation or clock leap detected (housekeeper delta=3h27s883ms388µs200ns).
+Thu 02-12-2021 09:57:30.988 WARN  - [-17 housekeeper] HikariPool                : HikariPool-17 - Thread starvation or clock leap detected (housekeeper delta=5h49m1s105ms212µs800ns).
+Thu 02-12-2021 09:59:43.782 INFO  - [      Thread-86] ThreadPoolTaskExecutor    : Shutting down ExecutorService 'applicationTaskExecutor'
+Thu 02-12-2021 09:59:43.784 INFO  - [      Thread-86] LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+Thu 02-12-2021 09:59:44.002 WARN  - [      Thread-86] DisposableBeanAdapter     : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-200]
+Thu 02-12-2021 09:59:44.003 INFO  - [      Thread-86] HikariDataSource          : HikariPool-17 - Shutdown initiated...
+Thu 02-12-2021 09:59:44.007 INFO  - [      Thread-86] HikariDataSource          : HikariPool-17 - Shutdown completed.
+Thu 02-12-2021 09:59:45.495 INFO  - [  restartedMain] WorkmotionApiApplication  : Starting WorkmotionApiApplication using Java 1.8.0_40 on Dexter with PID 14340 (C:\Users\CHINEDU\Documents\workspace-spring-tool-suite-4-4.7.0.RELEASE\workmotion-api\target\classes started by CHINEDU in C:\Users\CHINEDU\Documents\workspace-spring-tool-suite-4-4.7.0.RELEASE\workmotion-api)
+Thu 02-12-2021 09:59:45.496 INFO  - [  restartedMain] WorkmotionApiApplication  : No active profile set, falling back to default profiles: default
+Thu 02-12-2021 09:59:49.241 INFO  - [  restartedMain] RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+Thu 02-12-2021 09:59:49.287 INFO  - [  restartedMain] RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 45 ms. Found 4 JPA repository interfaces.
+Thu 02-12-2021 09:59:49.380 INFO  - [  restartedMain] PostProcessorRegistrationDelegate$BeanPostProcessorChecker : Bean 'configProcessor' of type [com.workmotion.devops.config.ConfigProcessor$$EnhancerBySpringCGLIB$$bff60def] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+Thu 02-12-2021 09:59:49.382 INFO  - [  restartedMain] PostProcessorRegistrationDelegate$BeanPostProcessorChecker : Bean 'asyncConfig' of type [com.workmotion.devops.config.AsyncConfig$$EnhancerBySpringCGLIB$$79ca549d] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+Thu 02-12-2021 09:59:54.719 INFO  - [  restartedMain] TomcatWebServer           : Tomcat initialized with port(s): 9190 (http)
+Thu 02-12-2021 09:59:54.721 INFO  - [  restartedMain] Http11NioProtocol         : Initializing ProtocolHandler ["http-nio-9190"]
+Thu 02-12-2021 09:59:54.722 INFO  - [  restartedMain] StandardService           : Starting service [Tomcat]
+Thu 02-12-2021 09:59:54.722 INFO  - [  restartedMain] StandardEngine            : Starting Servlet engine: [Apache Tomcat/9.0.41]
+Thu 02-12-2021 09:59:54.808 INFO  - [  restartedMain] [/]                       : Initializing Spring embedded WebApplicationContext
+Thu 02-12-2021 09:59:54.808 INFO  - [  restartedMain] ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 9307 ms
+Thu 02-12-2021 09:59:54.870 INFO  - [  restartedMain] HikariDataSource          : HikariPool-18 - Starting...
+Thu 02-12-2021 09:59:54.873 INFO  - [  restartedMain] HikariDataSource          : HikariPool-18 - Start completed.
+Thu 02-12-2021 09:59:54.874 INFO  - [  restartedMain] H2ConsoleAutoConfiguration : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:workmotion'
+Thu 02-12-2021 09:59:54.948 INFO  - [  restartedMain] LogHelper                 : HHH000204: Processing PersistenceUnitInfo [name: default]
+Thu 02-12-2021 09:59:54.958 INFO  - [  restartedMain] Dialect                   : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+Thu 02-12-2021 09:59:55.114 INFO  - [  restartedMain] JtaPlatformInitiator      : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+Thu 02-12-2021 09:59:55.114 INFO  - [  restartedMain] LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+Thu 02-12-2021 09:59:55.141 INFO  - [  restartedMain] OptionalLiveReloadServer  : LiveReload server is running on port 35729
+Thu 02-12-2021 09:59:55.493 WARN  - [  restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+Thu 02-12-2021 09:59:55.544 INFO  - [  restartedMain] ThreadPoolTaskExecutor    : Initializing ExecutorService 'applicationTaskExecutor'
+Thu 02-12-2021 09:59:55.556 DEBUG - [  restartedMain] RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+Thu 02-12-2021 09:59:55.584 DEBUG - [  restartedMain] RequestMappingHandlerMapping : 16 mappings in 'requestMappingHandlerMapping'
+Thu 02-12-2021 09:59:55.605 DEBUG - [  restartedMain] SimpleUrlHandlerMapping   : Patterns [/api/v2/api-docs, /api/swagger-resources/configuration/ui, /api/swagger-resources/configuration/security, /api/swagger-resources] in 'viewControllerHandlerMapping'
+Thu 02-12-2021 09:59:55.952 DEBUG - [  restartedMain] SimpleUrlHandlerMapping   : Patterns [/webjars/**, /**, /api/swagger-ui.html**, /api/webjars/**, /**/swagger-ui/**] in 'resourceHandlerMapping'
+Thu 02-12-2021 09:59:55.964 DEBUG - [  restartedMain] ExceptionHandlerExceptionResolver : ControllerAdvice beans: 2 @ExceptionHandler, 1 ResponseBodyAdvice
+Thu 02-12-2021 09:59:56.225 INFO  - [  restartedMain] EndpointLinksResolver     : Exposing 13 endpoint(s) beneath base path '/actuator'
+Thu 02-12-2021 09:59:56.265 INFO  - [  restartedMain] Http11NioProtocol         : Starting ProtocolHandler ["http-nio-9190"]
+Thu 02-12-2021 09:59:56.270 INFO  - [  restartedMain] TomcatWebServer           : Tomcat started on port(s): 9190 (http) with context path ''
+Thu 02-12-2021 09:59:56.283 INFO  - [  restartedMain] WorkmotionApiApplication  : Started WorkmotionApiApplication in 11.081 seconds (JVM running for 48134.562)
+Thu 02-12-2021 09:59:56.286 INFO  - [  restartedMain] ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+Thu 02-12-2021 10:01:05.208 WARN  - [on(1)-127.0.0.1] misc                      : The server has decided to close this client connection.
+Thu 02-12-2021 18:06:24.434 WARN  - [-18 housekeeper] HikariPool                : HikariPool-18 - Thread starvation or clock leap detected (housekeeper delta=3h28s609ms266µs600ns).
+Thu 02-12-2021 19:26:07.749 WARN  - [-18 housekeeper] HikariPool                : HikariPool-18 - Thread starvation or clock leap detected (housekeeper delta=1h19m43s750ms948µs).
+Thu 02-12-2021 19:28:48.578 INFO  - [n(17)-127.0.0.1] SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+Thu 02-12-2021 19:28:48.578 INFO  - [n(21)-127.0.0.1] SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+Thu 02-12-2021 19:28:48.594 INFO  - [n(16)-127.0.0.1] SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+Thu 02-12-2021 19:28:48.594 INFO  - [n(20)-127.0.0.1] SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+Thu 02-12-2021 19:28:48.595 INFO  - [n(19)-127.0.0.1] SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+Thu 02-12-2021 19:28:48.770 INFO  - [n(14)-127.0.0.1] SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+Thu 02-12-2021 19:28:49.039 INFO  - [n(18)-127.0.0.1] SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+Thu 02-12-2021 19:28:49.041 INFO  - [n(15)-127.0.0.1] SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+Thu 02-12-2021 19:28:50.685 INFO  - [n(19)-127.0.0.1] ThreadPoolTaskExecutor    : Shutting down ExecutorService 'applicationTaskExecutor'
+Thu 02-12-2021 19:28:50.691 INFO  - [n(19)-127.0.0.1] LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+Thu 02-12-2021 19:28:51.276 WARN  - [n(19)-127.0.0.1] DisposableBeanAdapter     : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-200]
+Thu 02-12-2021 19:28:51.277 INFO  - [n(19)-127.0.0.1] HikariDataSource          : HikariPool-18 - Shutdown initiated...
+Thu 02-12-2021 19:28:51.475 INFO  - [n(19)-127.0.0.1] HikariDataSource          : HikariPool-18 - Shutdown completed.
+Thu 02-12-2021 19:37:07.242 INFO  - [kground-preinit] Version                   : HV000001: Hibernate Validator 6.1.6.Final
+Thu 02-12-2021 19:37:07.300 INFO  - [  restartedMain] WorkmotionApiApplication  : Starting WorkmotionApiApplication using Java 1.8.0_40 on Dexter with PID 1924 (C:\Users\CHINEDU\Documents\workspace-spring-tool-suite-4-4.7.0.RELEASE\workmotion-api\target\classes started by CHINEDU in C:\Users\CHINEDU\Documents\workspace-spring-tool-suite-4-4.7.0.RELEASE\workmotion-api)
+Thu 02-12-2021 19:37:07.309 INFO  - [  restartedMain] WorkmotionApiApplication  : No active profile set, falling back to default profiles: default
+Thu 02-12-2021 19:37:07.405 INFO  - [  restartedMain] DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+Thu 02-12-2021 19:37:07.407 INFO  - [  restartedMain] DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+Thu 02-12-2021 19:37:09.662 INFO  - [  restartedMain] RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+Thu 02-12-2021 19:37:09.795 INFO  - [  restartedMain] RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 118 ms. Found 4 JPA repository interfaces.
+Thu 02-12-2021 19:37:10.177 INFO  - [  restartedMain] PostProcessorRegistrationDelegate$BeanPostProcessorChecker : Bean 'configProcessor' of type [com.workmotion.devops.config.ConfigProcessor$$EnhancerBySpringCGLIB$$e5f70c7] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+Thu 02-12-2021 19:37:10.181 INFO  - [  restartedMain] PostProcessorRegistrationDelegate$BeanPostProcessorChecker : Bean 'asyncConfig' of type [com.workmotion.devops.config.AsyncConfig$$EnhancerBySpringCGLIB$$c833b775] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+Thu 02-12-2021 19:37:11.105 INFO  - [  restartedMain] TomcatWebServer           : Tomcat initialized with port(s): 9190 (http)
+Thu 02-12-2021 19:37:11.117 INFO  - [  restartedMain] Http11NioProtocol         : Initializing ProtocolHandler ["http-nio-9190"]
+Thu 02-12-2021 19:37:11.118 INFO  - [  restartedMain] StandardService           : Starting service [Tomcat]
+Thu 02-12-2021 19:37:11.119 INFO  - [  restartedMain] StandardEngine            : Starting Servlet engine: [Apache Tomcat/9.0.41]
+Thu 02-12-2021 19:37:11.278 INFO  - [  restartedMain] [/]                       : Initializing Spring embedded WebApplicationContext
+Thu 02-12-2021 19:37:11.279 INFO  - [  restartedMain] ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3870 ms
+Thu 02-12-2021 19:37:11.485 INFO  - [  restartedMain] HikariDataSource          : HikariPool-1 - Starting...
+Thu 02-12-2021 19:37:11.649 INFO  - [  restartedMain] HikariDataSource          : HikariPool-1 - Start completed.
+Thu 02-12-2021 19:37:11.660 INFO  - [  restartedMain] H2ConsoleAutoConfiguration : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:workmotion'
+Thu 02-12-2021 19:37:11.904 INFO  - [  restartedMain] LogHelper                 : HHH000204: Processing PersistenceUnitInfo [name: default]
+Thu 02-12-2021 19:37:11.984 INFO  - [  restartedMain] Version                   : HHH000412: Hibernate ORM core version 5.4.25.Final
+Thu 02-12-2021 19:37:12.232 INFO  - [  restartedMain] Version                   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+Thu 02-12-2021 19:37:12.401 INFO  - [  restartedMain] Dialect                   : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+Thu 02-12-2021 19:37:14.599 INFO  - [  restartedMain] JtaPlatformInitiator      : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+Thu 02-12-2021 19:37:14.642 INFO  - [  restartedMain] LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+Thu 02-12-2021 19:37:14.718 INFO  - [  restartedMain] OptionalLiveReloadServer  : LiveReload server is running on port 35729
+Thu 02-12-2021 19:37:15.834 WARN  - [  restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+Thu 02-12-2021 19:37:16.381 INFO  - [  restartedMain] ThreadPoolTaskExecutor    : Initializing ExecutorService 'applicationTaskExecutor'
+Thu 02-12-2021 19:37:16.413 DEBUG - [  restartedMain] RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+Thu 02-12-2021 19:37:16.597 DEBUG - [  restartedMain] RequestMappingHandlerMapping : 16 mappings in 'requestMappingHandlerMapping'
+Thu 02-12-2021 19:37:16.629 DEBUG - [  restartedMain] SimpleUrlHandlerMapping   : Patterns [/api/v2/api-docs, /api/swagger-resources/configuration/ui, /api/swagger-resources/configuration/security, /api/swagger-resources] in 'viewControllerHandlerMapping'
+Thu 02-12-2021 19:37:17.507 DEBUG - [  restartedMain] SimpleUrlHandlerMapping   : Patterns [/webjars/**, /**, /api/swagger-ui.html**, /api/webjars/**, /**/swagger-ui/**] in 'resourceHandlerMapping'
+Thu 02-12-2021 19:37:17.525 DEBUG - [  restartedMain] ExceptionHandlerExceptionResolver : ControllerAdvice beans: 2 @ExceptionHandler, 1 ResponseBodyAdvice
+Thu 02-12-2021 19:37:18.178 INFO  - [  restartedMain] EndpointLinksResolver     : Exposing 13 endpoint(s) beneath base path '/actuator'
+Thu 02-12-2021 19:37:18.265 INFO  - [  restartedMain] Http11NioProtocol         : Starting ProtocolHandler ["http-nio-9190"]
+Thu 02-12-2021 19:37:18.357 INFO  - [  restartedMain] TomcatWebServer           : Tomcat started on port(s): 9190 (http) with context path ''
+Thu 02-12-2021 19:37:18.379 INFO  - [  restartedMain] WorkmotionApiApplication  : Started WorkmotionApiApplication in 11.669 seconds (JVM running for 13.628)
+Thu 02-12-2021 19:37:21.322 INFO  - [on(1)-127.0.0.1] [/]                       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+Thu 02-12-2021 19:37:21.322 INFO  - [on(1)-127.0.0.1] DispatcherServlet         : Initializing Servlet 'dispatcherServlet'
+Thu 02-12-2021 19:37:21.323 DEBUG - [on(1)-127.0.0.1] DispatcherServlet         : Detected StandardServletMultipartResolver
+Thu 02-12-2021 19:37:21.323 DEBUG - [on(1)-127.0.0.1] DispatcherServlet         : Detected AcceptHeaderLocaleResolver
+Thu 02-12-2021 19:37:21.323 DEBUG - [on(1)-127.0.0.1] DispatcherServlet         : Detected FixedThemeResolver
+Thu 02-12-2021 19:37:21.325 DEBUG - [on(1)-127.0.0.1] DispatcherServlet         : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@6f23f4fc
+Thu 02-12-2021 19:37:21.325 DEBUG - [on(1)-127.0.0.1] DispatcherServlet         : Detected org.springframework.web.servlet.support.SessionFlashMapManager@665f752e
+Thu 02-12-2021 19:37:21.326 DEBUG - [on(1)-127.0.0.1] DispatcherServlet         : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+Thu 02-12-2021 19:37:21.326 INFO  - [on(1)-127.0.0.1] DispatcherServlet         : Completed initialization in 3 ms
+Thu 02-12-2021 19:37:34.415 INFO  - [nio-9190-exec-1] FilterConfig              : ---->>> HTTP METHOD: GET
+Thu 02-12-2021 19:37:34.416 INFO  - [nio-9190-exec-1] FilterConfig              : ---->>> REQUEST URI: /swagger-ui.html
+Thu 02-12-2021 19:37:34.416 INFO  - [nio-9190-exec-1] FilterConfig              : ---->>> SOURCE IP: 0:0:0:0:0:0:0:1
+Thu 02-12-2021 19:37:34.423 DEBUG - [nio-9190-exec-1] DispatcherServlet         : GET "/swagger-ui.html", parameters={}
+Thu 02-12-2021 19:37:34.445 DEBUG - [nio-9190-exec-1] RequestMappingHandlerMapping : Mapped to org.springdoc.webmvc.ui.SwaggerWelcomeWebMvc#redirectToUi(HttpServletRequest)
+Thu 02-12-2021 19:37:34.513 DEBUG - [nio-9190-exec-1] RedirectView              : View name 'redirect:', model {}
+Thu 02-12-2021 19:37:34.514 DEBUG - [nio-9190-exec-1] DispatcherServlet         : Completed 302 FOUND
+Thu 02-12-2021 19:37:34.643 INFO  - [nio-9190-exec-2] FilterConfig              : ---->>> HTTP METHOD: GET
+Thu 02-12-2021 19:37:34.643 INFO  - [nio-9190-exec-2] FilterConfig              : ---->>> REQUEST URI: /swagger-ui/index.html
+Thu 02-12-2021 19:37:34.643 INFO  - [nio-9190-exec-2] FilterConfig              : ---->>> SOURCE IP: 0:0:0:0:0:0:0:1
+Thu 02-12-2021 19:37:34.644 DEBUG - [nio-9190-exec-2] DispatcherServlet         : GET "/swagger-ui/index.html?configUrl=/v3/api-docs/swagger-config", parameters={masked}
+Thu 02-12-2021 19:37:34.654 DEBUG - [nio-9190-exec-2] SimpleUrlHandlerMapping   : Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/webjars/"]
+Thu 02-12-2021 19:37:35.373 DEBUG - [nio-9190-exec-2] DispatcherServlet         : Completed 304 NOT_MODIFIED
+Thu 02-12-2021 19:37:35.610 INFO  - [nio-9190-exec-3] FilterConfig              : ---->>> HTTP METHOD: GET
+Thu 02-12-2021 19:37:35.610 DEBUG - [nio-9190-exec-3] DispatcherServlet         : GET "/swagger-ui/swagger-ui.css", parameters={}
+Thu 02-12-2021 19:37:35.610 INFO  - [nio-9190-exec-3] FilterConfig              : ---->>> REQUEST URI: /swagger-ui/swagger-ui.css
+Thu 02-12-2021 19:37:35.610 INFO  - [nio-9190-exec-3] FilterConfig              : ---->>> SOURCE IP: 0:0:0:0:0:0:0:1
+Thu 02-12-2021 19:37:35.612 DEBUG - [nio-9190-exec-3] SimpleUrlHandlerMapping   : Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/webjars/"]
+Thu 02-12-2021 19:37:35.615 DEBUG - [nio-9190-exec-3] DispatcherServlet         : Completed 304 NOT_MODIFIED
+Thu 02-12-2021 19:37:35.690 INFO  - [nio-9190-exec-4] FilterConfig              : ---->>> HTTP METHOD: GET
+Thu 02-12-2021 19:37:35.690 DEBUG - [nio-9190-exec-5] DispatcherServlet         : GET "/swagger-ui/swagger-ui-standalone-preset.js", parameters={}
+Thu 02-12-2021 19:37:35.690 DEBUG - [nio-9190-exec-4] DispatcherServlet         : GET "/swagger-ui/swagger-ui-bundle.js", parameters={}
+Thu 02-12-2021 19:37:35.690 INFO  - [nio-9190-exec-5] FilterConfig              : ---->>> HTTP METHOD: GET
+Thu 02-12-2021 19:37:35.690 INFO  - [nio-9190-exec-5] FilterConfig              : ---->>> REQUEST URI: /swagger-ui/swagger-ui-standalone-preset.js
+Thu 02-12-2021 19:37:35.690 INFO  - [nio-9190-exec-4] FilterConfig              : ---->>> REQUEST URI: /swagger-ui/swagger-ui-bundle.js
+Thu 02-12-2021 19:37:35.690 INFO  - [nio-9190-exec-5] FilterConfig              : ---->>> SOURCE IP: 0:0:0:0:0:0:0:1
+Thu 02-12-2021 19:37:35.690 INFO  - [nio-9190-exec-4] FilterConfig              : ---->>> SOURCE IP: 0:0:0:0:0:0:0:1
+Thu 02-12-2021 19:37:35.692 DEBUG - [nio-9190-exec-4] SimpleUrlHandlerMapping   : Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/webjars/"]
+Thu 02-12-2021 19:37:35.692 DEBUG - [nio-9190-exec-5] SimpleUrlHandlerMapping   : Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/webjars/"]
+Thu 02-12-2021 19:37:35.697 DEBUG - [nio-9190-exec-4] DispatcherServlet         : Completed 304 NOT_MODIFIED
+Thu 02-12-2021 19:37:35.697 DEBUG - [nio-9190-exec-5] DispatcherServlet         : Completed 304 NOT_MODIFIED
+Thu 02-12-2021 19:37:36.157 DEBUG - [nio-9190-exec-6] DispatcherServlet         : GET "/swagger-ui/swagger-ui-bundle.js", parameters={}
+Thu 02-12-2021 19:37:36.160 DEBUG - [nio-9190-exec-7] DispatcherServlet         : GET "/swagger-ui/swagger-ui-standalone-preset.js", parameters={}
+Thu 02-12-2021 19:37:36.156 INFO  - [nio-9190-exec-6] FilterConfig              : ---->>> HTTP METHOD: GET
+Thu 02-12-2021 19:37:36.156 INFO  - [nio-9190-exec-6] FilterConfig              : ---->>> REQUEST URI: /swagger-ui/swagger-ui-bundle.js
+Thu 02-12-2021 19:37:36.157 INFO  - [nio-9190-exec-6] FilterConfig              : ---->>> SOURCE IP: 0:0:0:0:0:0:0:1
+Thu 02-12-2021 19:37:36.160 INFO  - [nio-9190-exec-7] FilterConfig              : ---->>> HTTP METHOD: GET
+Thu 02-12-2021 19:37:36.160 INFO  - [nio-9190-exec-7] FilterConfig              : ---->>> REQUEST URI: /swagger-ui/swagger-ui-standalone-preset.js
+Thu 02-12-2021 19:37:36.160 INFO  - [nio-9190-exec-7] FilterConfig              : ---->>> SOURCE IP: 0:0:0:0:0:0:0:1
+Thu 02-12-2021 19:37:36.170 DEBUG - [nio-9190-exec-7] SimpleUrlHandlerMapping   : Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/webjars/"]
+Thu 02-12-2021 19:37:36.170 DEBUG - [nio-9190-exec-6] SimpleUrlHandlerMapping   : Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/webjars/"]
+Thu 02-12-2021 19:37:36.180 DEBUG - [nio-9190-exec-7] DispatcherServlet         : Completed 304 NOT_MODIFIED
+Thu 02-12-2021 19:37:36.180 DEBUG - [nio-9190-exec-6] DispatcherServlet         : Completed 304 NOT_MODIFIED
+Thu 02-12-2021 19:37:36.997 INFO  - [nio-9190-exec-8] FilterConfig              : ---->>> HTTP METHOD: GET
+Thu 02-12-2021 19:37:36.997 DEBUG - [nio-9190-exec-8] DispatcherServlet         : GET "/v3/api-docs/swagger-config", parameters={}
+Thu 02-12-2021 19:37:36.997 INFO  - [nio-9190-exec-8] FilterConfig              : ---->>> REQUEST URI: /v3/api-docs/swagger-config
+Thu 02-12-2021 19:37:36.997 INFO  - [nio-9190-exec-8] FilterConfig              : ---->>> SOURCE IP: 0:0:0:0:0:0:0:1
+Thu 02-12-2021 19:37:37.000 DEBUG - [nio-9190-exec-8] RequestMappingHandlerMapping : Mapped to org.springdoc.webmvc.ui.SwaggerWelcomeWebMvc#openapiJson(HttpServletRequest)
+Thu 02-12-2021 19:37:37.021 DEBUG - [nio-9190-exec-8] RequestResponseBodyMethodProcessor : Using 'application/json', given [*/*] and supported [application/json]
+Thu 02-12-2021 19:37:37.023 DEBUG - [nio-9190-exec-8] RequestResponseBodyMethodProcessor : Writing [{configUrl=/v3/api-docs/swagger-config, oauth2RedirectUrl=http://localhost:9190/swagger-ui/oauth2-re (truncated)...]
+Thu 02-12-2021 19:37:37.050 DEBUG - [nio-9190-exec-8] DispatcherServlet         : Completed 200 OK
+Thu 02-12-2021 19:37:37.182 DEBUG - [nio-9190-exec-9] DispatcherServlet         : GET "/v3/api-docs", parameters={}
+Thu 02-12-2021 19:37:37.182 INFO  - [nio-9190-exec-9] FilterConfig              : ---->>> HTTP METHOD: GET
+Thu 02-12-2021 19:37:37.182 INFO  - [nio-9190-exec-9] FilterConfig              : ---->>> REQUEST URI: /v3/api-docs
+Thu 02-12-2021 19:37:37.182 INFO  - [nio-9190-exec-9] FilterConfig              : ---->>> SOURCE IP: 0:0:0:0:0:0:0:1
+Thu 02-12-2021 19:37:37.183 DEBUG - [nio-9190-exec-9] RequestMappingHandlerMapping : Mapped to org.springdoc.webmvc.api.OpenApiWebMvcResource#openapiJson(HttpServletRequest, String)
+Thu 02-12-2021 19:37:38.433 INFO  - [nio-9190-exec-9] AbstractOpenApiResource   : Init duration for springdoc-openapi is: 1226 ms
+Thu 02-12-2021 19:37:38.483 DEBUG - [nio-9190-exec-9] RequestResponseBodyMethodProcessor : Using 'application/json', given [application/json, */*] and supported [application/json]
+Thu 02-12-2021 19:37:38.483 DEBUG - [nio-9190-exec-9] RequestResponseBodyMethodProcessor : Writing ["{"openapi":"3.0.1","info":{"title":"WorkMotion API","description":"Swagger API documentation","vers (truncated)...]
+Thu 02-12-2021 19:37:38.486 DEBUG - [nio-9190-exec-9] DispatcherServlet         : Completed 200 OK
+Thu 02-12-2021 19:37:53.984 INFO  - [       Thread-7] ThreadPoolTaskExecutor    : Shutting down ExecutorService 'applicationTaskExecutor'
+Thu 02-12-2021 19:37:53.992 INFO  - [       Thread-7] LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+Thu 02-12-2021 19:37:54.220 WARN  - [       Thread-7] DisposableBeanAdapter     : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-200]
+Thu 02-12-2021 19:37:54.223 INFO  - [       Thread-7] HikariDataSource          : HikariPool-1 - Shutdown initiated...
+Thu 02-12-2021 19:37:54.235 INFO  - [       Thread-7] HikariDataSource          : HikariPool-1 - Shutdown completed.
+Thu 02-12-2021 19:37:54.761 INFO  - [  restartedMain] WorkmotionApiApplication  : Starting WorkmotionApiApplication using Java 1.8.0_40 on Dexter with PID 1924 (C:\Users\CHINEDU\Documents\workspace-spring-tool-suite-4-4.7.0.RELEASE\workmotion-api\target\classes started by CHINEDU in C:\Users\CHINEDU\Documents\workspace-spring-tool-suite-4-4.7.0.RELEASE\workmotion-api)
+Thu 02-12-2021 19:37:54.763 INFO  - [  restartedMain] WorkmotionApiApplication  : No active profile set, falling back to default profiles: default
+Thu 02-12-2021 19:37:55.445 INFO  - [  restartedMain] RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+Thu 02-12-2021 19:37:55.491 INFO  - [  restartedMain] RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 45 ms. Found 4 JPA repository interfaces.
+Thu 02-12-2021 19:37:55.594 INFO  - [  restartedMain] PostProcessorRegistrationDelegate$BeanPostProcessorChecker : Bean 'configProcessor' of type [com.workmotion.devops.config.ConfigProcessor$$EnhancerBySpringCGLIB$$e5f70c7] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+Thu 02-12-2021 19:37:55.596 INFO  - [  restartedMain] PostProcessorRegistrationDelegate$BeanPostProcessorChecker : Bean 'asyncConfig' of type [com.workmotion.devops.config.AsyncConfig$$EnhancerBySpringCGLIB$$c833b775] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+Thu 02-12-2021 19:37:55.790 INFO  - [  restartedMain] TomcatWebServer           : Tomcat initialized with port(s): 9190 (http)
+Thu 02-12-2021 19:37:55.791 INFO  - [  restartedMain] Http11NioProtocol         : Initializing ProtocolHandler ["http-nio-9190"]
+Thu 02-12-2021 19:37:55.791 INFO  - [  restartedMain] StandardService           : Starting service [Tomcat]
+Thu 02-12-2021 19:37:55.792 INFO  - [  restartedMain] StandardEngine            : Starting Servlet engine: [Apache Tomcat/9.0.41]
+Thu 02-12-2021 19:37:55.835 INFO  - [  restartedMain] [/]                       : Initializing Spring embedded WebApplicationContext
+Thu 02-12-2021 19:37:55.835 INFO  - [  restartedMain] ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1064 ms
+Thu 02-12-2021 19:37:55.902 INFO  - [  restartedMain] HikariDataSource          : HikariPool-2 - Starting...
+Thu 02-12-2021 19:37:55.905 INFO  - [  restartedMain] HikariDataSource          : HikariPool-2 - Start completed.
+Thu 02-12-2021 19:37:55.905 INFO  - [  restartedMain] H2ConsoleAutoConfiguration : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:workmotion'
+Thu 02-12-2021 19:37:55.993 INFO  - [  restartedMain] LogHelper                 : HHH000204: Processing PersistenceUnitInfo [name: default]
+Thu 02-12-2021 19:37:56.005 INFO  - [  restartedMain] Dialect                   : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+Thu 02-12-2021 19:37:56.202 INFO  - [  restartedMain] JtaPlatformInitiator      : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+Thu 02-12-2021 19:37:56.203 INFO  - [  restartedMain] LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+Thu 02-12-2021 19:37:56.225 INFO  - [  restartedMain] OptionalLiveReloadServer  : LiveReload server is running on port 35729
+Thu 02-12-2021 19:37:56.591 WARN  - [  restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+Thu 02-12-2021 19:37:56.636 INFO  - [  restartedMain] ThreadPoolTaskExecutor    : Initializing ExecutorService 'applicationTaskExecutor'
+Thu 02-12-2021 19:37:56.648 DEBUG - [  restartedMain] RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+Thu 02-12-2021 19:37:56.671 DEBUG - [  restartedMain] RequestMappingHandlerMapping : 16 mappings in 'requestMappingHandlerMapping'
+Thu 02-12-2021 19:37:56.690 DEBUG - [  restartedMain] SimpleUrlHandlerMapping   : Patterns [/api/v2/api-docs, /api/swagger-resources/configuration/ui, /api/swagger-resources/configuration/security, /api/swagger-resources] in 'viewControllerHandlerMapping'
+Thu 02-12-2021 19:37:57.042 DEBUG - [  restartedMain] SimpleUrlHandlerMapping   : Patterns [/webjars/**, /**, /api/swagger-ui.html**, /api/webjars/**, /**/swagger-ui/**] in 'resourceHandlerMapping'
+Thu 02-12-2021 19:37:57.054 DEBUG - [  restartedMain] ExceptionHandlerExceptionResolver : ControllerAdvice beans: 2 @ExceptionHandler, 1 ResponseBodyAdvice
+Thu 02-12-2021 19:37:57.302 INFO  - [  restartedMain] EndpointLinksResolver     : Exposing 13 endpoint(s) beneath base path '/actuator'
+Thu 02-12-2021 19:37:57.343 INFO  - [  restartedMain] Http11NioProtocol         : Starting ProtocolHandler ["http-nio-9190"]
+Thu 02-12-2021 19:37:57.349 INFO  - [  restartedMain] TomcatWebServer           : Tomcat started on port(s): 9190 (http) with context path ''
+Thu 02-12-2021 19:37:57.364 INFO  - [  restartedMain] WorkmotionApiApplication  : Started WorkmotionApiApplication in 2.709 seconds (JVM running for 52.613)
+Thu 02-12-2021 19:37:57.371 INFO  - [  restartedMain] ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+Thu 02-12-2021 19:38:04.382 INFO  - [nio-9190-exec-1] [/]                       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+Thu 02-12-2021 19:38:04.383 INFO  - [nio-9190-exec-1] DispatcherServlet         : Initializing Servlet 'dispatcherServlet'
+Thu 02-12-2021 19:38:04.383 DEBUG - [nio-9190-exec-1] DispatcherServlet         : Detected StandardServletMultipartResolver
+Thu 02-12-2021 19:38:04.383 DEBUG - [nio-9190-exec-1] DispatcherServlet         : Detected AcceptHeaderLocaleResolver
+Thu 02-12-2021 19:38:04.383 DEBUG - [nio-9190-exec-1] DispatcherServlet         : Detected FixedThemeResolver
+Thu 02-12-2021 19:38:04.385 DEBUG - [nio-9190-exec-1] DispatcherServlet         : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@66452c2f
+Thu 02-12-2021 19:38:04.386 DEBUG - [nio-9190-exec-1] DispatcherServlet         : Detected org.springframework.web.servlet.support.SessionFlashMapManager@6ae934b5
+Thu 02-12-2021 19:38:04.386 DEBUG - [nio-9190-exec-1] DispatcherServlet         : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+Thu 02-12-2021 19:38:04.386 INFO  - [nio-9190-exec-1] DispatcherServlet         : Completed initialization in 3 ms
+Thu 02-12-2021 19:38:04.388 INFO  - [nio-9190-exec-1] FilterConfig              : ---->>> HTTP METHOD: GET
+Thu 02-12-2021 19:38:04.388 DEBUG - [nio-9190-exec-1] DispatcherServlet         : GET "/swagger-ui/index.html?configUrl=/v3/api-docs/swagger-config", parameters={masked}
+Thu 02-12-2021 19:38:04.388 INFO  - [nio-9190-exec-1] FilterConfig              : ---->>> REQUEST URI: /swagger-ui/index.html
+Thu 02-12-2021 19:38:04.388 INFO  - [nio-9190-exec-1] FilterConfig              : ---->>> SOURCE IP: 0:0:0:0:0:0:0:1
+Thu 02-12-2021 19:38:04.390 DEBUG - [nio-9190-exec-1] SimpleUrlHandlerMapping   : Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/webjars/"]
+Thu 02-12-2021 19:38:04.392 DEBUG - [nio-9190-exec-1] DispatcherServlet         : Completed 304 NOT_MODIFIED
+Thu 02-12-2021 19:38:04.895 INFO  - [nio-9190-exec-2] FilterConfig              : ---->>> HTTP METHOD: GET
+Thu 02-12-2021 19:38:04.898 DEBUG - [nio-9190-exec-2] DispatcherServlet         : GET "/v3/api-docs/swagger-config", parameters={}
+Thu 02-12-2021 19:38:04.895 INFO  - [nio-9190-exec-2] FilterConfig              : ---->>> REQUEST URI: /v3/api-docs/swagger-config
+Thu 02-12-2021 19:38:04.898 INFO  - [nio-9190-exec-2] FilterConfig              : ---->>> SOURCE IP: 0:0:0:0:0:0:0:1
+Thu 02-12-2021 19:38:04.903 DEBUG - [nio-9190-exec-2] RequestMappingHandlerMapping : Mapped to org.springdoc.webmvc.ui.SwaggerWelcomeWebMvc#openapiJson(HttpServletRequest)
+Thu 02-12-2021 19:38:04.908 INFO  - [nio-9190-exec-3] FilterConfig              : ---->>> HTTP METHOD: GET
+Thu 02-12-2021 19:38:04.908 DEBUG - [nio-9190-exec-3] DispatcherServlet         : GET "/swagger-ui/favicon-32x32.png", parameters={}
+Thu 02-12-2021 19:38:04.908 INFO  - [nio-9190-exec-3] FilterConfig              : ---->>> REQUEST URI: /swagger-ui/favicon-32x32.png
+Thu 02-12-2021 19:38:04.908 INFO  - [nio-9190-exec-3] FilterConfig              : ---->>> SOURCE IP: 0:0:0:0:0:0:0:1
+Thu 02-12-2021 19:38:04.909 DEBUG - [nio-9190-exec-2] RequestResponseBodyMethodProcessor : Using 'application/json', given [*/*] and supported [application/json]
+Thu 02-12-2021 19:38:04.911 DEBUG - [nio-9190-exec-2] RequestResponseBodyMethodProcessor : Writing [{configUrl=/v3/api-docs/swagger-config, oauth2RedirectUrl=http://localhost:9190/swagger-ui/oauth2-re (truncated)...]
+Thu 02-12-2021 19:38:04.911 DEBUG - [nio-9190-exec-3] SimpleUrlHandlerMapping   : Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/webjars/"]
+Thu 02-12-2021 19:38:04.914 DEBUG - [nio-9190-exec-2] DispatcherServlet         : Completed 200 OK
+Thu 02-12-2021 19:38:04.925 DEBUG - [nio-9190-exec-3] DispatcherServlet         : Completed 200 OK
+Thu 02-12-2021 19:38:04.961 DEBUG - [nio-9190-exec-4] DispatcherServlet         : GET "/v3/api-docs", parameters={}
+Thu 02-12-2021 19:38:04.961 INFO  - [nio-9190-exec-4] FilterConfig              : ---->>> HTTP METHOD: GET
+Thu 02-12-2021 19:38:04.961 INFO  - [nio-9190-exec-4] FilterConfig              : ---->>> REQUEST URI: /v3/api-docs
+Thu 02-12-2021 19:38:04.961 INFO  - [nio-9190-exec-4] FilterConfig              : ---->>> SOURCE IP: 0:0:0:0:0:0:0:1
+Thu 02-12-2021 19:38:04.964 DEBUG - [nio-9190-exec-4] RequestMappingHandlerMapping : Mapped to org.springdoc.webmvc.api.OpenApiWebMvcResource#openapiJson(HttpServletRequest, String)
+Thu 02-12-2021 19:38:05.208 INFO  - [nio-9190-exec-4] AbstractOpenApiResource   : Init duration for springdoc-openapi is: 233 ms
+Thu 02-12-2021 19:38:05.215 DEBUG - [nio-9190-exec-4] RequestResponseBodyMethodProcessor : Using 'application/json', given [application/json, */*] and supported [application/json]
+Thu 02-12-2021 19:38:05.215 DEBUG - [nio-9190-exec-4] RequestResponseBodyMethodProcessor : Writing ["{"openapi":"3.0.1","info":{"title":"WorkMotion API","description":"Swagger API documentation","vers (truncated)...]
+Thu 02-12-2021 19:38:05.217 DEBUG - [nio-9190-exec-4] DispatcherServlet         : Completed 200 OK
+Thu 02-12-2021 19:42:04.944 INFO  - [      Thread-11] ThreadPoolTaskExecutor    : Shutting down ExecutorService 'applicationTaskExecutor'
+Thu 02-12-2021 19:42:04.945 INFO  - [      Thread-11] LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+Thu 02-12-2021 19:42:05.150 WARN  - [      Thread-11] DisposableBeanAdapter     : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-200]
+Thu 02-12-2021 19:42:05.151 INFO  - [      Thread-11] HikariDataSource          : HikariPool-2 - Shutdown initiated...
+Thu 02-12-2021 19:42:05.157 INFO  - [      Thread-11] HikariDataSource          : HikariPool-2 - Shutdown completed.
+Thu 02-12-2021 19:42:05.632 INFO  - [  restartedMain] WorkmotionApiApplication  : Starting WorkmotionApiApplication using Java 1.8.0_40 on Dexter with PID 1924 (C:\Users\CHINEDU\Documents\workspace-spring-tool-suite-4-4.7.0.RELEASE\workmotion-api\target\classes started by CHINEDU in C:\Users\CHINEDU\Documents\workspace-spring-tool-suite-4-4.7.0.RELEASE\workmotion-api)
+Thu 02-12-2021 19:42:05.633 INFO  - [  restartedMain] WorkmotionApiApplication  : No active profile set, falling back to default profiles: default
+Thu 02-12-2021 19:42:06.253 INFO  - [  restartedMain] RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+Thu 02-12-2021 19:42:06.309 INFO  - [  restartedMain] RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 55 ms. Found 4 JPA repository interfaces.
+Thu 02-12-2021 19:42:06.399 INFO  - [  restartedMain] PostProcessorRegistrationDelegate$BeanPostProcessorChecker : Bean 'configProcessor' of type [com.workmotion.devops.config.ConfigProcessor$$EnhancerBySpringCGLIB$$e5f70c7] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+Thu 02-12-2021 19:42:06.400 INFO  - [  restartedMain] PostProcessorRegistrationDelegate$BeanPostProcessorChecker : Bean 'asyncConfig' of type [com.workmotion.devops.config.AsyncConfig$$EnhancerBySpringCGLIB$$c833b775] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+Thu 02-12-2021 19:42:06.590 INFO  - [  restartedMain] TomcatWebServer           : Tomcat initialized with port(s): 9190 (http)
+Thu 02-12-2021 19:42:06.592 INFO  - [  restartedMain] Http11NioProtocol         : Initializing ProtocolHandler ["http-nio-9190"]
+Thu 02-12-2021 19:42:06.592 INFO  - [  restartedMain] StandardService           : Starting service [Tomcat]
+Thu 02-12-2021 19:42:06.593 INFO  - [  restartedMain] StandardEngine            : Starting Servlet engine: [Apache Tomcat/9.0.41]
+Thu 02-12-2021 19:42:06.624 INFO  - [  restartedMain] [/]                       : Initializing Spring embedded WebApplicationContext
+Thu 02-12-2021 19:42:06.624 INFO  - [  restartedMain] ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 987 ms
+Thu 02-12-2021 19:42:06.685 INFO  - [  restartedMain] HikariDataSource          : HikariPool-3 - Starting...
+Thu 02-12-2021 19:42:06.689 INFO  - [  restartedMain] HikariDataSource          : HikariPool-3 - Start completed.
+Thu 02-12-2021 19:42:06.689 INFO  - [  restartedMain] H2ConsoleAutoConfiguration : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:workmotion'
+Thu 02-12-2021 19:42:06.777 INFO  - [  restartedMain] LogHelper                 : HHH000204: Processing PersistenceUnitInfo [name: default]
+Thu 02-12-2021 19:42:06.786 INFO  - [  restartedMain] Dialect                   : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+Thu 02-12-2021 19:42:06.949 INFO  - [  restartedMain] JtaPlatformInitiator      : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+Thu 02-12-2021 19:42:06.950 INFO  - [  restartedMain] LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+Thu 02-12-2021 19:42:06.969 INFO  - [  restartedMain] OptionalLiveReloadServer  : LiveReload server is running on port 35729
+Thu 02-12-2021 19:42:07.276 WARN  - [  restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+Thu 02-12-2021 19:42:07.319 INFO  - [  restartedMain] ThreadPoolTaskExecutor    : Initializing ExecutorService 'applicationTaskExecutor'
+Thu 02-12-2021 19:42:07.329 DEBUG - [  restartedMain] RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+Thu 02-12-2021 19:42:07.352 DEBUG - [  restartedMain] RequestMappingHandlerMapping : 16 mappings in 'requestMappingHandlerMapping'
+Thu 02-12-2021 19:42:07.372 DEBUG - [  restartedMain] SimpleUrlHandlerMapping   : Patterns [/api/v2/api-docs, /api/swagger-resources/configuration/ui, /api/swagger-resources/configuration/security, /api/swagger-resources] in 'viewControllerHandlerMapping'
+Thu 02-12-2021 19:42:07.799 DEBUG - [  restartedMain] SimpleUrlHandlerMapping   : Patterns [/webjars/**, /**, /api/swagger-ui.html**, /api/webjars/**, /**/swagger-ui/**] in 'resourceHandlerMapping'
+Thu 02-12-2021 19:42:07.810 DEBUG - [  restartedMain] ExceptionHandlerExceptionResolver : ControllerAdvice beans: 2 @ExceptionHandler, 1 ResponseBodyAdvice
+Thu 02-12-2021 19:42:08.000 INFO  - [  restartedMain] EndpointLinksResolver     : Exposing 13 endpoint(s) beneath base path '/actuator'
+Thu 02-12-2021 19:42:08.041 INFO  - [  restartedMain] Http11NioProtocol         : Starting ProtocolHandler ["http-nio-9190"]
+Thu 02-12-2021 19:42:08.046 INFO  - [  restartedMain] TomcatWebServer           : Tomcat started on port(s): 9190 (http) with context path ''
+Thu 02-12-2021 19:42:08.059 INFO  - [  restartedMain] WorkmotionApiApplication  : Started WorkmotionApiApplication in 2.528 seconds (JVM running for 303.309)
+Thu 02-12-2021 19:42:08.063 INFO  - [  restartedMain] ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+Thu 02-12-2021 19:42:15.912 INFO  - [nio-9190-exec-1] [/]                       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+Thu 02-12-2021 19:42:15.912 INFO  - [nio-9190-exec-1] DispatcherServlet         : Initializing Servlet 'dispatcherServlet'
+Thu 02-12-2021 19:42:15.913 DEBUG - [nio-9190-exec-1] DispatcherServlet         : Detected StandardServletMultipartResolver
+Thu 02-12-2021 19:42:15.913 DEBUG - [nio-9190-exec-1] DispatcherServlet         : Detected AcceptHeaderLocaleResolver
+Thu 02-12-2021 19:42:15.913 DEBUG - [nio-9190-exec-1] DispatcherServlet         : Detected FixedThemeResolver
+Thu 02-12-2021 19:42:15.914 DEBUG - [nio-9190-exec-1] DispatcherServlet         : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@3e193d55
+Thu 02-12-2021 19:42:15.915 DEBUG - [nio-9190-exec-1] DispatcherServlet         : Detected org.springframework.web.servlet.support.SessionFlashMapManager@11d77e6b
+Thu 02-12-2021 19:42:15.915 DEBUG - [nio-9190-exec-1] DispatcherServlet         : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+Thu 02-12-2021 19:42:15.915 INFO  - [nio-9190-exec-1] DispatcherServlet         : Completed initialization in 3 ms
+Thu 02-12-2021 19:42:15.916 INFO  - [nio-9190-exec-1] FilterConfig              : ---->>> HTTP METHOD: GET
+Thu 02-12-2021 19:42:15.916 INFO  - [nio-9190-exec-1] FilterConfig              : ---->>> REQUEST URI: /swagger-ui/index.html
+Thu 02-12-2021 19:42:15.916 DEBUG - [nio-9190-exec-1] DispatcherServlet         : GET "/swagger-ui/index.html?configUrl=/v3/api-docs/swagger-config", parameters={masked}
+Thu 02-12-2021 19:42:15.916 INFO  - [nio-9190-exec-1] FilterConfig              : ---->>> SOURCE IP: 0:0:0:0:0:0:0:1
+Thu 02-12-2021 19:42:15.918 DEBUG - [nio-9190-exec-1] SimpleUrlHandlerMapping   : Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/webjars/"]
+Thu 02-12-2021 19:42:15.922 DEBUG - [nio-9190-exec-1] DispatcherServlet         : Completed 304 NOT_MODIFIED
+Thu 02-12-2021 19:42:16.118 INFO  - [nio-9190-exec-2] FilterConfig              : ---->>> HTTP METHOD: GET
+Thu 02-12-2021 19:42:16.118 DEBUG - [nio-9190-exec-2] DispatcherServlet         : GET "/v3/api-docs/swagger-config", parameters={}
+Thu 02-12-2021 19:42:16.118 INFO  - [nio-9190-exec-2] FilterConfig              : ---->>> REQUEST URI: /v3/api-docs/swagger-config
+Thu 02-12-2021 19:42:16.118 INFO  - [nio-9190-exec-2] FilterConfig              : ---->>> SOURCE IP: 0:0:0:0:0:0:0:1
+Thu 02-12-2021 19:42:16.119 DEBUG - [nio-9190-exec-2] RequestMappingHandlerMapping : Mapped to org.springdoc.webmvc.ui.SwaggerWelcomeWebMvc#openapiJson(HttpServletRequest)
+Thu 02-12-2021 19:42:16.125 DEBUG - [nio-9190-exec-2] RequestResponseBodyMethodProcessor : Using 'application/json', given [*/*] and supported [application/json]
+Thu 02-12-2021 19:42:16.129 DEBUG - [nio-9190-exec-2] RequestResponseBodyMethodProcessor : Writing [{configUrl=/v3/api-docs/swagger-config, oauth2RedirectUrl=http://localhost:9190/swagger-ui/oauth2-re (truncated)...]
+Thu 02-12-2021 19:42:16.130 INFO  - [nio-9190-exec-3] FilterConfig              : ---->>> HTTP METHOD: GET
+Thu 02-12-2021 19:42:16.130 INFO  - [nio-9190-exec-3] FilterConfig              : ---->>> REQUEST URI: /swagger-ui/favicon-32x32.png
+Thu 02-12-2021 19:42:16.130 INFO  - [nio-9190-exec-3] FilterConfig              : ---->>> SOURCE IP: 0:0:0:0:0:0:0:1
+Thu 02-12-2021 19:42:16.130 DEBUG - [nio-9190-exec-3] DispatcherServlet         : GET "/swagger-ui/favicon-32x32.png", parameters={}
+Thu 02-12-2021 19:42:16.133 DEBUG - [nio-9190-exec-2] DispatcherServlet         : Completed 200 OK
+Thu 02-12-2021 19:42:16.135 DEBUG - [nio-9190-exec-3] SimpleUrlHandlerMapping   : Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/webjars/"]
+Thu 02-12-2021 19:42:16.146 DEBUG - [nio-9190-exec-3] DispatcherServlet         : Completed 200 OK
+Thu 02-12-2021 19:42:16.191 INFO  - [nio-9190-exec-4] FilterConfig              : ---->>> HTTP METHOD: GET
+Thu 02-12-2021 19:42:16.191 DEBUG - [nio-9190-exec-4] DispatcherServlet         : GET "/v3/api-docs", parameters={}
+Thu 02-12-2021 19:42:16.191 INFO  - [nio-9190-exec-4] FilterConfig              : ---->>> REQUEST URI: /v3/api-docs
+Thu 02-12-2021 19:42:16.191 INFO  - [nio-9190-exec-4] FilterConfig              : ---->>> SOURCE IP: 0:0:0:0:0:0:0:1
+Thu 02-12-2021 19:42:16.193 DEBUG - [nio-9190-exec-4] RequestMappingHandlerMapping : Mapped to org.springdoc.webmvc.api.OpenApiWebMvcResource#openapiJson(HttpServletRequest, String)
+Thu 02-12-2021 19:42:16.425 INFO  - [nio-9190-exec-4] AbstractOpenApiResource   : Init duration for springdoc-openapi is: 226 ms
+Thu 02-12-2021 19:42:16.428 DEBUG - [nio-9190-exec-4] RequestResponseBodyMethodProcessor : Using 'application/json', given [application/json, */*] and supported [application/json]
+Thu 02-12-2021 19:42:16.429 DEBUG - [nio-9190-exec-4] RequestResponseBodyMethodProcessor : Writing ["{"openapi":"3.0.1","info":{"title":"WorkMotion API","description":"Swagger API documentation","vers (truncated)...]
+Thu 02-12-2021 19:42:16.434 DEBUG - [nio-9190-exec-4] DispatcherServlet         : Completed 200 OK
+Thu 02-12-2021 19:42:30.579 INFO  - [nio-9190-exec-5] FilterConfig              : ---->>> HTTP METHOD: GET
+Thu 02-12-2021 19:42:30.580 DEBUG - [nio-9190-exec-5] DispatcherServlet         : GET "/api/v1/get-marital-statuses", parameters={}
+Thu 02-12-2021 19:42:30.579 INFO  - [nio-9190-exec-5] FilterConfig              : ---->>> REQUEST URI: /api/v1/get-marital-statuses
+Thu 02-12-2021 19:42:30.579 INFO  - [nio-9190-exec-5] FilterConfig              : ---->>> SOURCE IP: 0:0:0:0:0:0:0:1
+Thu 02-12-2021 19:42:30.582 DEBUG - [nio-9190-exec-5] RequestMappingHandlerMapping : Mapped to com.workmotion.devops.controller.EmployeeController#maritalStatus()
+Thu 02-12-2021 19:42:30.583 INFO  - [nio-9190-exec-5] EmployeeController        : ---->>> Fetching approved contract types
+Thu 02-12-2021 19:42:30.614 DEBUG - [nio-9190-exec-5] HttpEntityMethodProcessor : Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+Thu 02-12-2021 19:42:30.615 DEBUG - [nio-9190-exec-5] HttpEntityMethodProcessor : Writing [com.workmotion.devops.dto.GenericResponseDTO@69410662]
+Thu 02-12-2021 19:42:30.620 DEBUG - [nio-9190-exec-5] DispatcherServlet         : Completed 200 OK
+Thu 02-12-2021 19:42:33.602 INFO  - [nio-9190-exec-6] FilterConfig              : ---->>> HTTP METHOD: GET
+Thu 02-12-2021 19:42:33.602 DEBUG - [nio-9190-exec-6] DispatcherServlet         : GET "/api/v1/get-marital-statuses", parameters={}
+Thu 02-12-2021 19:42:33.602 INFO  - [nio-9190-exec-6] FilterConfig              : ---->>> REQUEST URI: /api/v1/get-marital-statuses
+Thu 02-12-2021 19:42:33.602 INFO  - [nio-9190-exec-6] FilterConfig              : ---->>> SOURCE IP: 0:0:0:0:0:0:0:1
+Thu 02-12-2021 19:42:33.603 DEBUG - [nio-9190-exec-6] RequestMappingHandlerMapping : Mapped to com.workmotion.devops.controller.EmployeeController#maritalStatus()
+Thu 02-12-2021 19:42:33.604 INFO  - [nio-9190-exec-6] EmployeeController        : ---->>> Fetching approved contract types
+Thu 02-12-2021 19:42:33.605 DEBUG - [nio-9190-exec-6] HttpEntityMethodProcessor : Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+Thu 02-12-2021 19:42:33.606 DEBUG - [nio-9190-exec-6] HttpEntityMethodProcessor : Writing [com.workmotion.devops.dto.GenericResponseDTO@5391aa98]
+Thu 02-12-2021 19:42:33.608 DEBUG - [nio-9190-exec-6] DispatcherServlet         : Completed 200 OK
+Thu 02-12-2021 19:43:39.644 INFO  - [      Thread-16] ThreadPoolTaskExecutor    : Shutting down ExecutorService 'applicationTaskExecutor'
+Thu 02-12-2021 19:43:39.645 INFO  - [      Thread-16] LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+Thu 02-12-2021 19:43:39.849 WARN  - [      Thread-16] DisposableBeanAdapter     : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-200]
+Thu 02-12-2021 19:43:39.850 INFO  - [      Thread-16] HikariDataSource          : HikariPool-3 - Shutdown initiated...
+Thu 02-12-2021 19:43:39.858 INFO  - [      Thread-16] HikariDataSource          : HikariPool-3 - Shutdown completed.
+Thu 02-12-2021 19:43:40.467 INFO  - [  restartedMain] WorkmotionApiApplication  : Starting WorkmotionApiApplication using Java 1.8.0_40 on Dexter with PID 1924 (C:\Users\CHINEDU\Documents\workspace-spring-tool-suite-4-4.7.0.RELEASE\workmotion-api\target\classes started by CHINEDU in C:\Users\CHINEDU\Documents\workspace-spring-tool-suite-4-4.7.0.RELEASE\workmotion-api)
+Thu 02-12-2021 19:43:40.469 INFO  - [  restartedMain] WorkmotionApiApplication  : No active profile set, falling back to default profiles: default
+Thu 02-12-2021 19:43:41.048 INFO  - [  restartedMain] RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+Thu 02-12-2021 19:43:41.095 INFO  - [  restartedMain] RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 47 ms. Found 4 JPA repository interfaces.
+Thu 02-12-2021 19:43:41.185 INFO  - [  restartedMain] PostProcessorRegistrationDelegate$BeanPostProcessorChecker : Bean 'configProcessor' of type [com.workmotion.devops.config.ConfigProcessor$$EnhancerBySpringCGLIB$$e5f70c7] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+Thu 02-12-2021 19:43:41.186 INFO  - [  restartedMain] PostProcessorRegistrationDelegate$BeanPostProcessorChecker : Bean 'asyncConfig' of type [com.workmotion.devops.config.AsyncConfig$$EnhancerBySpringCGLIB$$c833b775] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+Thu 02-12-2021 19:43:41.375 INFO  - [  restartedMain] TomcatWebServer           : Tomcat initialized with port(s): 9190 (http)
+Thu 02-12-2021 19:43:41.376 INFO  - [  restartedMain] Http11NioProtocol         : Initializing ProtocolHandler ["http-nio-9190"]
+Thu 02-12-2021 19:43:41.377 INFO  - [  restartedMain] StandardService           : Starting service [Tomcat]
+Thu 02-12-2021 19:43:41.377 INFO  - [  restartedMain] StandardEngine            : Starting Servlet engine: [Apache Tomcat/9.0.41]
+Thu 02-12-2021 19:43:41.401 INFO  - [  restartedMain] [/]                       : Initializing Spring embedded WebApplicationContext
+Thu 02-12-2021 19:43:41.401 INFO  - [  restartedMain] ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 928 ms
+Thu 02-12-2021 19:43:41.461 INFO  - [  restartedMain] HikariDataSource          : HikariPool-4 - Starting...
+Thu 02-12-2021 19:43:41.465 INFO  - [  restartedMain] HikariDataSource          : HikariPool-4 - Start completed.
+Thu 02-12-2021 19:43:41.465 INFO  - [  restartedMain] H2ConsoleAutoConfiguration : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:workmotion'
+Thu 02-12-2021 19:43:41.539 INFO  - [  restartedMain] LogHelper                 : HHH000204: Processing PersistenceUnitInfo [name: default]
+Thu 02-12-2021 19:43:41.549 INFO  - [  restartedMain] Dialect                   : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+Thu 02-12-2021 19:43:41.706 INFO  - [  restartedMain] JtaPlatformInitiator      : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+Thu 02-12-2021 19:43:41.707 INFO  - [  restartedMain] LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+Thu 02-12-2021 19:43:41.731 INFO  - [  restartedMain] OptionalLiveReloadServer  : LiveReload server is running on port 35729
+Thu 02-12-2021 19:43:42.016 WARN  - [  restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+Thu 02-12-2021 19:43:42.056 INFO  - [  restartedMain] ThreadPoolTaskExecutor    : Initializing ExecutorService 'applicationTaskExecutor'
+Thu 02-12-2021 19:43:42.066 DEBUG - [  restartedMain] RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+Thu 02-12-2021 19:43:42.095 DEBUG - [  restartedMain] RequestMappingHandlerMapping : 16 mappings in 'requestMappingHandlerMapping'
+Thu 02-12-2021 19:43:42.114 DEBUG - [  restartedMain] SimpleUrlHandlerMapping   : Patterns [/api/v2/api-docs, /api/swagger-resources/configuration/ui, /api/swagger-resources/configuration/security, /api/swagger-resources] in 'viewControllerHandlerMapping'
+Thu 02-12-2021 19:43:42.491 DEBUG - [  restartedMain] SimpleUrlHandlerMapping   : Patterns [/webjars/**, /**, /api/swagger-ui.html**, /api/webjars/**, /**/swagger-ui/**] in 'resourceHandlerMapping'
+Thu 02-12-2021 19:43:42.502 DEBUG - [  restartedMain] ExceptionHandlerExceptionResolver : ControllerAdvice beans: 2 @ExceptionHandler, 1 ResponseBodyAdvice
+Thu 02-12-2021 19:43:42.694 INFO  - [  restartedMain] EndpointLinksResolver     : Exposing 13 endpoint(s) beneath base path '/actuator'
+Thu 02-12-2021 19:43:42.732 INFO  - [  restartedMain] Http11NioProtocol         : Starting ProtocolHandler ["http-nio-9190"]
+Thu 02-12-2021 19:43:42.737 INFO  - [  restartedMain] TomcatWebServer           : Tomcat started on port(s): 9190 (http) with context path ''
+Thu 02-12-2021 19:43:42.751 INFO  - [  restartedMain] WorkmotionApiApplication  : Started WorkmotionApiApplication in 2.379 seconds (JVM running for 398.0)
+Thu 02-12-2021 19:43:42.755 INFO  - [  restartedMain] ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+Thu 02-12-2021 19:43:49.461 INFO  - [on(3)-127.0.0.1] SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+Thu 02-12-2021 19:43:49.966 INFO  - [on(3)-127.0.0.1] ThreadPoolTaskExecutor    : Shutting down ExecutorService 'applicationTaskExecutor'
+Thu 02-12-2021 19:43:49.969 INFO  - [on(3)-127.0.0.1] LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+Thu 02-12-2021 19:43:50.182 WARN  - [on(3)-127.0.0.1] DisposableBeanAdapter     : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-200]
+Thu 02-12-2021 19:43:50.183 INFO  - [on(3)-127.0.0.1] HikariDataSource          : HikariPool-4 - Shutdown initiated...
+Thu 02-12-2021 19:43:50.235 INFO  - [on(3)-127.0.0.1] HikariDataSource          : HikariPool-4 - Shutdown completed.
