@@ -30,7 +30,7 @@ import lombok.extern.slf4j.Slf4j;
 @RequiredArgsConstructor
 @RequestMapping("api/v1")
 @CrossOrigin(maxAge = 3600, origins = "*")
-@SecurityRequirement(name = "Channel-Code")
+@SecurityRequirement(name = "Channel-Code") 
 public class EmployeeController {
 	private final EmployeeService employeeService;
 	
