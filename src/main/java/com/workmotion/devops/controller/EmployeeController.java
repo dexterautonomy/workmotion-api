@@ -5,6 +5,7 @@ import java.util.List;
 import javax.validation.Valid;
 
 import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -92,5 +93,12 @@ public class EmployeeController {
 	public ResponseEntity<GenericResponseDTO<List<String>>> workType(){
 		log.info("---->>> Fetching approved contract types");
 		return new ResponseEntity<>(employeeService.worktype(), HttpStatus.OK);
+	}
+	
+	@PostMapping(value = "test", consumes = { MediaType.APPLICATION_XML_VALUE, MediaType.APPLICATION_JSON_VALUE }, 
+	        produces = { MediaType.APPLICATION_XML_VALUE, MediaType.APPLICATION_JSON_VALUE })
+	public ResponseEntity<EmployeeRequestDTO> test(@RequestBody @Valid EmployeeRequestDTO employeeDTO){
+		log.info("---->>> employeeDTO: {}", employeeDTO);
+		return new ResponseEntity<>(employeeDTO, HttpStatus.OK);
 	}
 }
